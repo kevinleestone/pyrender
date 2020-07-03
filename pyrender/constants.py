@@ -21,6 +21,10 @@ class RenderFlags(object):
     would result in an offscreen render with directional shadows and
     vertex normals enabled.
     """
+
+    """Custom flag for TRI."""
+    TRI_DISABLE_ANTIALIASING = 65536
+
     NONE = 0
     """Normal PBR Render."""
     DEPTH_ONLY = 1
