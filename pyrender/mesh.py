@@ -285,7 +285,7 @@ class Mesh(object):
             # Configure UV coordinates
             if mesh.visual.uv is not None:
                 uv = mesh.visual.uv.copy()
-                if smooth:
+                if smooth  or mesh.visual.uv.shape[0] == 0:
                     texcoords = uv
                 else:
                     texcoords = uv[mesh.faces].reshape(
